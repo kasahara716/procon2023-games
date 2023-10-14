@@ -27,14 +27,14 @@ export default function Log({ matchData, mapData }: Props) {
     return (
         <>
             <Grid container>
-                <Grid item md={6}>
+                <Grid item xs={12} sm={6}>
                     <Player
                         number={1}
                         name={matchData.player1}
                         score={matchData.turns[turn].scores[0]}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Player
                         number={2}
                         name={matchData.player2}
