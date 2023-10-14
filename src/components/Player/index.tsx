@@ -62,20 +62,22 @@ export default function Player({ number, name, score }: Props) {
                         <List>
                             <ListItem
                                 secondaryAction={
-                                    <Typography>
-                                        {score.castle_score}
-                                    </Typography>
+                                    <Typography>{score.wall_score}</Typography>
                                 }
                             >
                                 <ListItemAvatar>
                                     <Image
-                                        src={ShiroImg}
+                                        src={
+                                            number === 1
+                                                ? ZyouhekiPlayer1Img
+                                                : ZyouhekiPlayer2Img
+                                        }
                                         width={32}
                                         height={32}
-                                        alt="shiro"
+                                        alt="zinti"
                                     />
                                 </ListItemAvatar>
-                                <ListItemText>城ポイント</ListItemText>
+                                <ListItemText>城壁ポイント</ListItemText>
                             </ListItem>
                             <ListItem
                                 secondaryAction={
@@ -100,22 +102,20 @@ export default function Player({ number, name, score }: Props) {
                             </ListItem>
                             <ListItem
                                 secondaryAction={
-                                    <Typography>{score.wall_score}</Typography>
+                                    <Typography>
+                                        {score.castle_score}
+                                    </Typography>
                                 }
                             >
                                 <ListItemAvatar>
                                     <Image
-                                        src={
-                                            number === 1
-                                                ? ZyouhekiPlayer1Img
-                                                : ZyouhekiPlayer2Img
-                                        }
+                                        src={ShiroImg}
                                         width={32}
                                         height={32}
-                                        alt="zinti"
+                                        alt="shiro"
                                     />
                                 </ListItemAvatar>
-                                <ListItemText>城壁ポイント</ListItemText>
+                                <ListItemText>城ポイント</ListItemText>
                             </ListItem>
                             <Divider />
                             <ListItem
