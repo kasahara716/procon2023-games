@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Field from '../Field';
 import Player from '../Player';
 import Link from 'next/link';
+import Graph from '../Graph';
 
 type Props = {
     matchData: MatchData;
@@ -60,6 +61,14 @@ export default function Log({ matchData, mapData }: Props) {
                     masons={matchData.turns[turn].board.masons}
                     territories={matchData.turns[turn].board.territories}
                     walls={matchData.turns[turn].board.walls}
+                />
+            </Box>
+            <Box sx={{ textAlign: 'center' }}>
+                <Graph
+                    scores={matchData.turns.map((turn) => {
+                        return turn.scores;
+                    })}
+                    turn={turn}
                 />
             </Box>
         </>
