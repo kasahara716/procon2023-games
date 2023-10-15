@@ -22,7 +22,14 @@ type Props = {
     turn: number;
 };
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Legend);
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Legend,
+    Tooltip,
+);
 
 export default function Graph({ scores, turn }: Props) {
     const options = {

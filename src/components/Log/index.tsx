@@ -17,8 +17,6 @@ export default function Log({ matchData, mapData }: Props) {
     const [turn, setTurn] = useState<number>(0);
     const maxTurn = matchData.turns.length - 1;
 
-    console.log();
-
     const handleChangeSlider = (event: Event, value: number | number[]) => {
         if (typeof value === 'number') {
             setTurn(value);
